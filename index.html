@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102b50">
+<meta name="description" content="Protótipo fictício de central de atendimento para treinamento.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<title>Prudential Seguros — Demo fictícia</title>
+<style>
+:root{--navy:#102b50;--blue:#dceafe;--bg:#f1f5f9;--line:#e2e8f0;--muted:#64748b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#172033;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1100px;margin:auto;padding:18px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:750}.logo{background:var(--navy);color:#fff;border-radius:12px;width:46px;height:46px;display:grid;place-items:center;font-size:22px}.sub{font-size:12px;color:var(--muted);font-weight:400}.tag{border:1px solid #edcc79;background:#fff8e7;color:#805d13;padding:5px 8px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.06em}
+.panel{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden}.login{max-width:440px;margin:28px auto;padding:24px}.hero{background:var(--navy);color:white;border-radius:12px;padding:18px;margin-bottom:20px}.hero p{font-size:13px;opacity:.85}.field{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:9px;margin:6px 0 14px;background:white}.btn{padding:11px 15px;border:0;border-radius:9px;font-weight:700}.primary{background:var(--navy);color:white}.secondary{background:white;border:1px solid #cbd5e1;color:var(--navy)}.full{width:100%}.note{font-size:12px;color:var(--muted);line-height:1.5}.warning{padding:12px;border:1px solid #f3d28b;background:#fff8e7;border-radius:10px;font-size:13px;color:#714d0b;margin-bottom:18px}
+.hidden{display:none!important}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{padding:15px}.stat strong{display:block;color:var(--navy);font-size:25px;margin:4px 0}.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:14px}.side{padding:12px}.side button{display:block;width:100%;text-align:left;margin:5px 0}.chatgrid{display:grid;grid-template-columns:230px minmax(0,1fr)}.chatlist{border-right:1px solid var(--line);max-height:480px;overflow:auto}.chatrow{display:block;width:100%;padding:13px;text-align:left;background:#fff;border:0;border-bottom:1px solid var(--line)}.chatrow.active{background:#eef4fb;border-left:3px solid var(--navy)}.small{font-size:11px;color:var(--muted);margin-top:5px}.chathead{padding:13px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.messages{height:320px;overflow:auto;padding:14px;background:#f8fafc;display:flex;flex-direction:column}.bubble{max-width:88%;padding:10px 12px;border-radius:13px;margin:7px 0;font-size:14px;line-height:1.45;overflow-wrap:anywhere}.in{background:#e9eef5;margin-right:auto;border-bottom-left-radius:4px}.out{background:var(--blue);margin-left:auto;border-bottom-right-radius:4px}.reply{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}.reply input{margin:0;min-width:0}.foot{text-align:center;color:var(--muted);font-size:11px;margin:18px 0}
+@media(max-width:700px){.wrap{padding:12px}.stats{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}.side{display:flex;gap:8px}.side button{width:auto;flex:1}.chatgrid{grid-template-columns:1fr}.chatlist{max-height:175px;border-right:0;border-bottom:1px solid var(--line)}.messages{height:300px}.login{margin:16px auto;padding:18px}header{align-items:flex-start}.tag{font-size:9px}}
+</style>
+</head>
+<body><div class="wrap">
+<header><div class="brand"><div class="logo">P</div><div>Prudential Seguros<div class="sub">Protótipo de atendimento</div></div></div><span class="tag">DEMO FICTÍCIA</span></header>
+<section id="login" class="panel login">
+<div class="hero"><div class="sub" style="color:#fff">AMBIENTE DE TREINAMENTO</div><h2 style="margin:8px 0">Central de atendimento</h2><p>Acesse a demonstração para experimentar as funções.</p></div>
+<form id="loginForm"><label for="user">Usuário demonstrativo</label><input id="user" class="field" value="atendente.demo" autocomplete="off" required><label for="pass">Senha demonstrativa</label><input id="pass" class="field" type="password" value="demo123" autocomplete="off" required><p class="note">Use os dados de exemplo já preenchidos. Não insira senhas pessoais ou dados reais.</p><button class="btn primary full">Entrar na demonstração →</button></form>
+<p class="note" style="border-top:1px solid var(--line);padding-top:14px;margin-top:18px">Protótipo independente para treinamento. Não é um sistema oficial nem se conecta à Prudential.</p>
+</section>
+<section id="app" class="hidden">
+<div class="topline"><div><h1 style="margin:0;font-size:25px">Painel de atendimento</h1><div class="sub" style="margin-top:5px">Olá, atendente de demonstração.</div></div><button id="logout" class="btn secondary">Sair da demo</button></div>
+<div class="warning">Ambiente fictício: nomes, mensagens e indicadores são exemplos para treinamento. Este protótipo não representa um vínculo profissional com a Prudential.</div>
+<div class="stats"><div class="panel stat"><span class="sub">Conversas</span><strong id="total">4</strong><span class="sub">de exemplo</span></div><div class="panel stat"><span class="sub">Em andamento</span><strong id="open">3</strong><span class="sub">fictícias</span></div><div class="panel stat"><span class="sub">Respondidas</span><strong id="replies">0</strong><span class="sub">nesta sessão</span></div><div class="panel stat"><span class="sub">Status</span><strong style="font-size:19px">Online</strong><span class="sub">modo de teste</span></div></div>
+<div class="layout"><aside class="panel side"><button id="showChats" class="btn primary">▣ Conversas</button><button id="showSummary" class="btn secondary">▤ Resumo do painel</button><div class="note" style="border-top:1px solid var(--line);padding-top:14px;margin-top:12px">Perfil<br><b style="color:#172033">Atendente Demo</b><br>Treinamento fictício</div></aside>
+<main>
+<section id="chats" class="panel"><div style="padding:15px;border-bottom:1px solid var(--line)"><b>Caixa de entrada</b><div class="sub">Selecione uma conversa e responda.</div></div><div class="chatgrid"><div id="chatlist" class="chatlist"></div><div><div class="chathead"><div><b id="chatname">Mariana Costa</b><div id="topic" class="small">Dúvida sobre cobertura</div></div><span class="tag">SIMULAÇÃO</span></div><div id="messages" class="messages" aria-live="polite"></div><form id="replyForm" class="reply"><input id="reply" class="field" placeholder="Digite uma resposta de teste..." maxlength="500" required><button class="btn primary">Enviar</button></form><div class="note" style="padding:0 12px 12px">As respostas aparecem apenas neste protótipo; nada é enviado a clientes reais.</div></div></div></section>
+<section id="summary" class="panel hidden" style="padding:20px"><h2>Resumo da sessão</h2><p class="note">Indicadores locais de demonstração, atualizados enquanto você testa.</p><div class="stats" style="grid-template-columns:repeat(2,1fr)"><div class="stat" style="background:#f8fafc;border-radius:10px">Conversas de exemplo<strong id="sumTotal">4</strong></div><div class="stat" style="background:#f8fafc;border-radius:10px">Respostas enviadas<strong id="sumReplies">0</strong></div></div><p class="note">Pratique cumprimentar, confirmar a dúvida, explicar o próximo passo e encerrar com cordialidade.</p><button id="back" class="btn primary">Voltar às conversas</button></section>
+</main></div><div class="foot">Versão demonstrativa • sem conexão com sistemas, contas ou clientes reais.</div>
+</section>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const starter=[
+{id:1,name:"Mariana Costa",topic:"Dúvida sobre cobertura",status:"Em atendimento",messages:[{from:"in",text:"Olá! Gostaria de entender melhor quais situações estão cobertas pelo meu plano."}]},
+{id:2,name:"Rafael Mendes",topic:"Atualização cadastral",status:"Aguardando",messages:[{from:"in",text:"Boa tarde. Como funciona uma atualização de endereço?"}]},
+{id:3,name:"Beatriz Lima",topic:"Informações gerais",status:"Em atendimento",messages:[{from:"in",text:"Vocês poderiam me explicar como solicitar informações sobre uma apólice?"}]},
+{id:4,name:"Lucas Ferreira",topic:"Acompanhamento de solicitação",status:"Aguardando",messages:[{from:"in",text:"Oi! Gostaria de saber qual seria o próximo passo de uma solicitação fictícia."}]}
+];
+let chats=JSON.parse(localStorage.getItem("demoChats")||"null")||starter.map(c=>({...c,messages:c.messages.map(m=>({...m}))}));
+let selected=1,replies=Number(localStorage.getItem("demoReplies")||0);
+function save(){localStorage.setItem("demoChats",JSON.stringify(chats));localStorage.setItem("demoReplies",String(replies))}
+function render(){ $("chatlist").replaceChildren();chats.forEach(c=>{let b=document.createElement("button");b.className="chatrow"+(c.id===selected?" active":"");let n=document.createElement("b");n.textContent=c.name;let t=document.createElement("div");t.className="small";t.textContent=c.topic;let s=document.createElement("div");s.className="small";s.textContent=c.status+" · "+c.messages.length+" mensagem(ns)";b.append(n,t,s);b.onclick=()=>{selected=c.id;render()};$("chatlist").append(b)});let c=chats.find(x=>x.id===selected)||chats[0];selected=c.id;$("chatname").textContent=c.name;$("topic").textContent=c.topic;$("messages").replaceChildren();c.messages.forEach(m=>{let b=document.createElement("div");b.className="bubble "+(m.from==="out"?"out":"in");b.textContent=m.text;$("messages").append(b)});$("messages").scrollTop=$("messages").scrollHeight;$("total").textContent=chats.length;$("open").textContent=chats.filter(c=>c.status!=="Concluída").length;$("replies").textContent=replies;$("sumTotal").textContent=chats.length;$("sumReplies").textContent=replies;save()}
+$("loginForm").onsubmit=e=>{e.preventDefault();if(!$("user").value.trim()||!$("pass").value.trim())return;$("login").classList.add("hidden");$("app").classList.remove("hidden");render()};
+$("logout").onclick=()=>{$("app").classList.add("hidden");$("login").classList.remove("hidden")};
+$("replyForm").onsubmit=e=>{e.preventDefault();let text=$("reply").value.trim();if(!text)return;let c=chats.find(x=>x.id===selected);c.messages.push({from:"out",text});c.status="Em atendimento";replies++;$("reply").value="";render()};
+function view(which){$("chats").classList.toggle("hidden",which!=="chats");$("summary").classList.toggle("hidden",which!=="summary")}
+$("showChats").onclick=()=>view("chats");$("showSummary").onclick=()=>view("summary");$("back").onclick=()=>view("chats");
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script>
+</body></html>
